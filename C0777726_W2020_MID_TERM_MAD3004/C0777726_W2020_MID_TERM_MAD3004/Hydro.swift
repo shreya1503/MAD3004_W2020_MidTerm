@@ -10,5 +10,6 @@ import Foundation
 
 class Hydro : Bill
 {
-    
+    var agencyName : String?
+    var unitUsed : Float?
 }
