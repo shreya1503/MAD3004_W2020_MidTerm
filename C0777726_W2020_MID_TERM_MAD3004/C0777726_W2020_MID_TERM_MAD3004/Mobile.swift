@@ -10,9 +10,21 @@ import Foundation
 
 class Mobile : Bill
 {
-    var mobileManufacturerName : String?
-    var planName : String?
-    var mobileNumber : String?
-    var internetGBUsed : Float?
-    var minuteUsed : Float?
+    var mobileManufacturerName : String
+    var planName : String
+    var mobileNumber : String
+    var internetGBUsed : Float
+    var minuteUsed : Float
+    
+    init(mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minuteUsed:Float)
+    {
+        self.mobileManufacturerName = mobileManufacturerName
+        self.planName = planName
+        self.mobileNumber = mobileNumber
+        self.internetGBUsed = internetGBUsed
+        self.minuteUsed = minuteUsed
+    }
+    
 }
+
+
