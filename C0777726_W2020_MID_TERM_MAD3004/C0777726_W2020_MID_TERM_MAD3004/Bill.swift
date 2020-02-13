@@ -15,8 +15,17 @@ enum BillType
 
 class Bill
 {
-    var billid : String?
-    var billDate : Date?
-    var billType : BillType?
-    var totalBillAmount : Double?
+    var billID : String
+    var billDate : Date
+    var billType : BillType
+    var totalBillAmount : Double
+    
+    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double)
+    {
+        self.billID = billID
+        self.billDate = billDate
+        self.billType = billType
+        self.totalBillAmount = totalBillAmount
+    }
+    
 }

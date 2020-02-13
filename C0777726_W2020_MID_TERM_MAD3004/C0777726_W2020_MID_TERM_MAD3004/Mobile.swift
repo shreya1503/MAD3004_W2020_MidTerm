@@ -16,13 +16,14 @@ class Mobile : Bill
     var internetGBUsed : Float
     var minuteUsed : Float
     
-    init(mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minuteUsed:Float)
+    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double, mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minuteUsed:Float)
     {
         self.mobileManufacturerName = mobileManufacturerName
         self.planName = planName
         self.mobileNumber = mobileNumber
         self.internetGBUsed = internetGBUsed
         self.minuteUsed = minuteUsed
+        super.init(billID:billID, billDate:billDate, billType:billType, totalBillAmount:totalBillAmount)
     }
     
 }
