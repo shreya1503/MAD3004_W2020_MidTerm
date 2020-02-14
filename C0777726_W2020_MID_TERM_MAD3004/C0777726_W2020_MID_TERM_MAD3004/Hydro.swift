@@ -11,13 +11,19 @@ import Foundation
 class Hydro : Bill
 {
     var agencyName : String
-    var unitUsed : Float
+    var unitUsed : String
     
-    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double, agencyName:String, unitUsed:Float)
+    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double, agencyName:String, unitUsed:String)
     {
         self.agencyName = agencyName
         self.unitUsed = unitUsed
         super.init(billID:billID, billDate:billDate, billType:billType, totalBillAmount:totalBillAmount)
     }
         
+    override func Display()
+    {
+        super.Display()
+        print("Agency Name : \(agencyName)")
+        print("Units Used : \(unitUsed)")
+    }
 }

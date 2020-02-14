@@ -8,5 +8,7 @@
 
 import Foundation
 
+var h = Hydro(billID: "HYDB0001", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 250.50, agencyName: "Hydro Care", unitUsed: "25 Units")
+h.Display()
 
 
