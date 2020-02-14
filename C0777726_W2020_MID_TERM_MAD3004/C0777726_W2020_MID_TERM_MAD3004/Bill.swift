@@ -33,7 +33,7 @@ class Bill
         print("Bill ID              : \(billID)")
         print("Bill Date            : \(billDate)")
         print("Bill Type            : \(billType)")
-        print("Total Bill Amount    : $\(totalBillAmount) Units")
+        print("Total Bill Amount    : $\(totalBillAmount)")
     }
     
 }

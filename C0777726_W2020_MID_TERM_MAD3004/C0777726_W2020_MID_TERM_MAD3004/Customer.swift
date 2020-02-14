@@ -28,9 +28,15 @@ class Customer:IDisplay
         self.firstName = firstName
         self.lastName = lastName
         self.emailID = emailID
+        //billDicn.updateValue(Bill, forKey: customerID)
     }
     
+    func insertBill(Bills : Bill, customerID : String)
+       {
+        billDicn.updateValue(Bills, forKey: customerID)
+       }
     
+  
     
     
     func display()
@@ -40,7 +46,13 @@ class Customer:IDisplay
         print("Customer Email ID    : \(emailID)")
         print("             -----BILL INFORMATION-----          ")
         print("*************************************************")
-        
+        for b in billDicn
+        {
+            b.value.Display()
+        }
+        print("*************************************************")
+        //print("Total Bill Amount To Pay : \(totalBill())")
+        print("*************************************************")
     }
     
 }
