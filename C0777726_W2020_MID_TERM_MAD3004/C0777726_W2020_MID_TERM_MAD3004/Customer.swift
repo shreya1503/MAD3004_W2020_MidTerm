@@ -32,11 +32,18 @@ class Customer:IDisplay
     }
     
     func insertBill(Bills : Bill, customerID : String)
-       {
-        billDicn.updateValue(Bills, forKey: customerID)
-       }
+    {
+        billDicn.updateValue(Bills, forKey : customerID)
+    }
     
-  
+    func totalBill()
+    {
+        for t in billDicn
+        {
+             totalAmountToPay = totalAmountToPay + t.value.totalBillAmount
+        }
+        
+    }
     
     
     func display()
@@ -46,12 +53,16 @@ class Customer:IDisplay
         print("Customer Email ID    : \(emailID)")
         print("             -----BILL INFORMATION-----          ")
         print("*************************************************")
-        for b in billDicn
+        for (billID,Bills) in billDicn
         {
-            b.value.Display()
+            print("Bill ID          : \(billID)")
+            print("Bill Date        : \(Bills.billDate)")
+            print("Bill Type        : \(Bills.billType)")
+            print("Bill Amount      : \(Bills.totalBillAmount)")
+            
         }
         print("*************************************************")
-        //print("Total Bill Amount To Pay : \(totalBill())")
+        print("       Total Bill Amount To Pay : $\(totalBill())")
         print("*************************************************")
     }
     
