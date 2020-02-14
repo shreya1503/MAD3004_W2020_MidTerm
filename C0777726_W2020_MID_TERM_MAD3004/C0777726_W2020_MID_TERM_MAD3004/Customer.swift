@@ -19,7 +19,7 @@ class Customer:IDisplay
     }
     var emailID : String
     //Bill Dictionary to store all types of bills
-    var billDicn = [String:Bill]()
+    lazy var billDicn = [String:Bill]()
     var totalAmountToPay : Double = 0.0
     
     init(customerID:String, firstName:String, lastName:String, emailID:String)
@@ -45,7 +45,6 @@ class Customer:IDisplay
         
     }
     
-    
     func display()
     {
         print("Customer ID          : \(customerID)")
@@ -53,17 +52,31 @@ class Customer:IDisplay
         print("Customer Email ID    : \(emailID)")
         print("             -----BILL INFORMATION-----          ")
         print("*************************************************")
-        for (billID,Bills) in billDicn
+        /*for (billID,Bills) in billDicn
         {
             print("Bill ID          : \(billID)")
             print("Bill Date        : \(Bills.billDate)")
             print("Bill Type        : \(Bills.billType)")
             print("Bill Amount      : \(Bills.totalBillAmount)")
             
+        }*/
+        for t in billDicn
+        {
+            t.value.Display()
         }
-        print("*************************************************")
-        print("       Total Bill Amount To Pay : $\(totalBill())")
-        print("*************************************************")
+        
+        if billDicn.count == 0
+        {
+            print("No Bills For This Customer")
+        }
+        else
+        {
+            print("*************************************************")
+            print("       Total Bill Amount To Pay : $\(totalBill())")
+            print("*************************************************")
+        }
+        
     }
     
 }
+		        
