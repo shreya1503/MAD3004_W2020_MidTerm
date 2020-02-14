@@ -8,18 +8,19 @@
 
 import Foundation
 
-class Customer
+class Customer:IDisplay
 {
     var customerID : String
     var firstName : String
     var lastName : String
-    var fullName : String?
+    var fullName : String
     {
         return "\(firstName) \(lastName)"
     }
-    var emailID : String?
+    var emailID : String
     //Bill Dictionary to store all types of bills
-    var totalAmountToPay : Float?
+    var billDicn = [String:Bill]()
+    var totalAmountToPay : Double = 0.0
     
     init(customerID:String, firstName:String, lastName:String, emailID:String)
     {
@@ -27,6 +28,18 @@ class Customer
         self.firstName = firstName
         self.lastName = lastName
         self.emailID = emailID
+    }
+    
+    
+    
+    
+    func display()
+    {
+        print("Customer ID : \(customerID)")
+        print("Customer Full Name : \(fullName)")
+        print("Customer Email ID : \(emailID)")
+        print("     -----BILL INFORMATION-----     ")
+        print("************************************")
         
     }
     

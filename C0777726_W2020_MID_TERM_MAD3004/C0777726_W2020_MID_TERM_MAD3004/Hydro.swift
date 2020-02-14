@@ -11,9 +11,9 @@ import Foundation
 class Hydro : Bill
 {
     var agencyName : String
-    var unitUsed : String
+    var unitUsed : Float
     
-    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double, agencyName:String, unitUsed:String)
+    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double, agencyName:String, unitUsed:Float)
     {
         self.agencyName = agencyName
         self.unitUsed = unitUsed
@@ -24,6 +24,6 @@ class Hydro : Bill
     {
         super.Display()
         print("Agency Name : \(agencyName)")
-        print("Units Used : \(unitUsed)")
+        print("Units Used : \(unitUsed) Units")
     }
 }
