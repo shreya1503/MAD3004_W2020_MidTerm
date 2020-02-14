@@ -35,11 +35,11 @@ class Customer:IDisplay
     
     func display()
     {
-        print("Customer ID : \(customerID)")
-        print("Customer Full Name : \(fullName)")
-        print("Customer Email ID : \(emailID)")
-        print("     -----BILL INFORMATION-----     ")
-        print("************************************")
+        print("Customer ID          : \(customerID)")
+        print("Customer Full Name   : \(fullName)")
+        print("Customer Email ID    : \(emailID)")
+        print("             -----BILL INFORMATION-----          ")
+        print("*************************************************")
         
     }
     
