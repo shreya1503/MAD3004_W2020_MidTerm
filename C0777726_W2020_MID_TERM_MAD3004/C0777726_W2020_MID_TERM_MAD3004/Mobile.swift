@@ -29,10 +29,7 @@ class Mobile : Bill
     override func Display()
     {
         
-        print("Bill Id : \(billID)")
-        print("Bill Date : \(billDate)")
-        print("Bill Type : \(billType)")
-        print("Bill Amount : \(totalBillAmount)")
+        super.Display()
         print("Manufacturer Name : \(mobileManufacturerName)")
         print("Plan Name : \(planName)")
         print("Mobile Number : \(mobileNumber)")
