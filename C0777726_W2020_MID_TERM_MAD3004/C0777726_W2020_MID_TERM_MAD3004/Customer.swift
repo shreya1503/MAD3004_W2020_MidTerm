@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Customer 
+class Customer
 {
-    var customerId : String?
-    var firstName : String?
-    var lastName : String?
+    var customerID : String
+    var firstName : String
+    var lastName : String
     var fullName : String?
     {
         return "\(firstName) \(lastName)"
@@ -21,5 +21,13 @@ class Customer
     //Bill Dictionary to store all types of bills
     var totalAmountToPay : Float?
     
+    init(customerID:String, firstName:String, lastName:String, emailID:String)
+    {
+        self.customerID = customerID
+        self.firstName = firstName
+        self.lastName = lastName
+        self.emailID = emailID
+        
+    }
     
 }
