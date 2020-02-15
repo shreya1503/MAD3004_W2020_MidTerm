@@ -16,7 +16,9 @@ var m1 = Mobile(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, 
 
 var h1 = Hydro(billID: "HYD0001", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 250.50, agencyName: "Hydro Care", unitUsed: 25)
 
-var h2 = Hydro(billID: "HYD0002", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 400.50, agencyName: "PLanet Energy", unitUsed: 40)
+var h2 = Hydro(billID: "HYD0002", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 400.00, agencyName: "PLanet Energy", unitUsed: 40)
+
+var h3 = Hydro(billID: "HYD0003", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 100.50, agencyName: "Bruce Power", unitUsed: 18)
 
 
 var i1 = Internet(billID: "INT0001", billDate: Date(), billType: BillType.INTERNET, totalBillAmount: 140, providerName: "Rogers", internetGBUsed: 500)
