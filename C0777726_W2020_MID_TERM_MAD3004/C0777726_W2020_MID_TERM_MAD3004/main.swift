@@ -21,7 +21,9 @@ var h2 = Hydro(billID: "HYD0002", billDate: Date(), billType: BillType.HYDRO, to
 var h3 = Hydro(billID: "HYD0003", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 100.50, agencyName: "Bruce Power", unitUsed: 18)
 
 
-var i1 = Internet(billID: "INT0001", billDate: Date(), billType: BillType.INTERNET, totalBillAmount: 140, providerName: "Rogers", internetGBUsed: 500)
+var i1 = Internet(billID: "INT0001", billDate: Date(), billType: BillType.INTERNET, totalBillAmount: 180, providerName: "Rogers", internetGBUsed: 500)
+
+var i2 = Internet(billID: "INT0002", billDate: Date(), billType: BillType.INTERNET, totalBillAmount: 140, providerName: "Freedom", internetGBUsed: 400)
 
 
 var c1 = Customer(customerID: "C0001", firstName: "Shreya", lastName: "Vaghasia", emailID: "Shreya321@gmail.com")
