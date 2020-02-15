@@ -8,22 +8,27 @@
 
 import Foundation
 
-var b1 = Bill(billID: "HYD0001", billDate: Date(), billType: BillType.HYDRO,				 totalBillAmount: 25)
-
-var b2 = Bill(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, totalBillAmount: 25)
+var b1 = Bill(billID: "BILL0001", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 25)
+var b2 = Bill(billID: "BILL0002", billDate: Date(), billType: BillType.MOBILE, totalBillAmount: 25)
 
 var m1 = Mobile(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, totalBillAmount: 60, mobileManufacturerName: "Apple Inc. iPhone X MAX+", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "9012345678", internetGBUsed: 4, minuteUsed: 230)
 
 var h1 = Hydro(billID: "HYD0001", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 250.50, agencyName: "Hydro Care", unitUsed: 25)
 
+var i1 = Internet(billID: "INT0001", billDate: Date(), billType: BillType.INTERNET, totalBillAmount: 140, providerName: "Rogers", internetGBUsed: 500)
+
 var c1 = Customer(customerID: "C0001", firstName: "Shreya", lastName: "Vaghasia", emailID: "Shreya321@gmail.com")
 
-c1.insertBill(Bills : m1, customerID: "\(b1.billID)")
-//c1.insertBill(Bills : h1, customerID: "\(b1.billID)")
+var c2 = Customer(customerID: "C0002", firstName: "Palak", lastName: "Joshipura", emailID: "PalakJ@gmail.com")
 
-//b1.Display()
-//h1.Display()
+c1.insertBill(Bills : m1, customerID: "\(m1.billID)")
+c1.insertBill(Bills: h1, customerID: "\(h1.billID)")
+c1.insertBill(Bills: i1, customerID: "\(i1.billID)")
 c1.display()
-//m1.Display()
+
+c2.insertBill(Bills : h1, customerID: "\(b1.billID)")
+//c2.display()
+
+
 
 

@@ -36,12 +36,13 @@ class Customer:IDisplay
         billDicn.updateValue(Bills, forKey : customerID)
     }
     
-    func totalBill()
+    func totalBill() -> Double
     {
         for t in billDicn
         {
              totalAmountToPay = totalAmountToPay + t.value.totalBillAmount
         }
+        return totalAmountToPay
         
     }
     
@@ -56,6 +57,7 @@ class Customer:IDisplay
         for t in billDicn
         {
             t.value.Display()
+            print("***********************************************************")
         }
         
         if billDicn.count == 0
@@ -64,7 +66,6 @@ class Customer:IDisplay
         }
         else
         {
-            print("***********************************************************")
             print("       \tTotal Bill Amount To Pay : $\(totalBill())")
             print("***********************************************************")
         }
