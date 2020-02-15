@@ -39,6 +39,7 @@ c2.insertBill(Bills : h2, customerID: "\(h2.billID)")
 c2.insertBill(Bills : i2, customerID: "\(i2.billID)")
 c2.display()
 
-
+c3.insertBill(Bills : h3, customerID: "\(h3.billID)")
+c3.display()
 
 
