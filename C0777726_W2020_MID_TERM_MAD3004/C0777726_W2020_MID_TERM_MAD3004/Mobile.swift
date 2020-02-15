@@ -30,11 +30,11 @@ class Mobile : Bill
     {
         
         super.Display()
-        print("Manufacturer Name    : \(mobileManufacturerName)")
-        print("Plan Name            : \(planName)")
-        print("Mobile Number        : \(mobileNumber)")
-        print("Internet Usage       : \(internetGBUsed) GB")
-        print("Minutes Usage        : \(minuteUsed) Minutes")
+        print("\tManufacturer Name    : \(mobileManufacturerName)")
+        print("\tPlan Name            : \(planName)")
+        print("\tMobile Number        : \(mobileNumber)")
+        print("\tInternet Usage       : \(internetGBUsed) GB")
+        print("\tMinutes Usage        : \(minuteUsed) Minutes")
     
     }
     

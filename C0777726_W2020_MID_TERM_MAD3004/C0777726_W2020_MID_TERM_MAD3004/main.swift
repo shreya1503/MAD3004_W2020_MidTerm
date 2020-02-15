@@ -19,7 +19,7 @@ var h1 = Hydro(billID: "HYD0001", billDate: Date(), billType: BillType.HYDRO, to
 var c1 = Customer(customerID: "C0001", firstName: "Shreya", lastName: "Vaghasia", emailID: "Shreya321@gmail.com")
 
 c1.insertBill(Bills : m1, customerID: "\(b1.billID)")
-//c1.insertBill(Bills: b2, customerID: "C0001")
+//c1.insertBill(Bills : h1, customerID: "\(b1.billID)")
 
 //b1.Display()
 //h1.Display()

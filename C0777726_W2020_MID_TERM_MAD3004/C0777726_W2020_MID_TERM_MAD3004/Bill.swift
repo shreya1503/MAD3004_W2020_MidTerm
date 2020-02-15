@@ -30,10 +30,10 @@ class Bill
     
     func Display()
     {
-        print("Bill ID              : \(billID)")
-        print("Bill Date            : \(billDate)")
-        print("Bill Type            : \(billType)")
-        print("Bill Amount          : $\(totalBillAmount)")
+        print("\tBill ID              : \(billID)")
+        print("\tBill Date            : \(billDate)")
+        print("\tBill Type            : \(billType)")
+        print("\tBill Amount          : $\(totalBillAmount)")
     }
     
 }

@@ -50,16 +50,9 @@ class Customer:IDisplay
         print("Customer ID          : \(customerID)")
         print("Customer Full Name   : \(fullName)")
         print("Customer Email ID    : \(emailID)")
-        print("             -----BILL INFORMATION-----          ")
-        print("*************************************************")
-        /*for (billID,Bills) in billDicn
-        {
-            print("Bill ID          : \(billID)")
-            print("Bill Date        : \(Bills.billDate)")
-            print("Bill Type        : \(Bills.billType)")
-            print("Bill Amount      : \(Bills.totalBillAmount)")
-            
-        }*/
+        print("             \t-----BILL INFORMATION-----          ")
+        print("***********************************************************")
+   
         for t in billDicn
         {
             t.value.Display()
@@ -67,13 +60,13 @@ class Customer:IDisplay
         
         if billDicn.count == 0
         {
-            print("No Bills For This Customer")
+            print("\tNo Bills For This Customer")
         }
         else
         {
-            print("*************************************************")
-            print("       Total Bill Amount To Pay : $\(totalBill())")
-            print("*************************************************")
+            print("***********************************************************")
+            print("       \tTotal Bill Amount To Pay : $\(totalBill())")
+            print("***********************************************************")
         }
         
     }
