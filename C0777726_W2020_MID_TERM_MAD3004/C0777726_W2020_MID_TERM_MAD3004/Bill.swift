@@ -33,7 +33,8 @@ class Bill
         
         let hourformater = DateFormatter()
         hourformater.dateFormat = "h:mm a"
-        date = formater.string(from: billDate) + hourformater.string(from: billDate)
+        
+        date = formater.string(from: billDate) + " " + hourformater.string(from: billDate)
     }
     
     func Display()
