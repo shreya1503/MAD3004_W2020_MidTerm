@@ -28,7 +28,7 @@ var i2 = Internet(billID: "INT0002", billDate: Date(), billType: BillType.INTERN
 
 var c1 = Customer(customerID: "C0001", firstName: "Shreya", lastName: "Vaghasia", emailID: "Shreya321@gmail.com")
 var c2 = Customer(customerID: "C0002", firstName: "Palak", lastName: "Joshipura", emailID: "PalakJ@gmail.com")
-var c3 = Customer(customerID: "C0003", firstName: "Charmi", lastName: "Patel", emailID: "CharmiPatel@gmail.com")
+var c3 = Customer(customerID: "C0003", firstName: "Charmi", lastName: "Patel", emailID: "CharmiPatelgmail.com")
 
 c1.insertBill(Bills : m1, customerID: "\(m1.billID)")
 c1.insertBill(Bills: h1, customerID: "\(h1.billID)")
