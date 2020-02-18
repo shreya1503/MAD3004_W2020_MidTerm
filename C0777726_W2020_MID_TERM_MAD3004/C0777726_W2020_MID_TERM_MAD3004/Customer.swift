@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 class Customer:IDisplay
 {
     
@@ -27,8 +25,8 @@ class Customer:IDisplay
     }
     var emailID : String
     //Bill Dictionary to store all types of bills
-    lazy var billDicn = [String:[Bill]]()
-    var bills = [Bill]()
+    lazy var billDicn = [String:Bill]()
+    //var bills = [Bill]()
     var totalAmountToPay : Double = 0.0
     
     init(customerID:String, firstName:String, lastName:String, emailID:String)
@@ -47,18 +45,17 @@ class Customer:IDisplay
         }
     }
     
-    func insertBill(Bills : Bill)
+    func insertBill(Bills : Bill, billID : String)
     {
-        bills.append(Bills)
-        billDicn.updateValue([Bills], forKey : customerID)
+        billDicn.updateValue(Bills, forKey : billID)
     }
     
     func totalBill() -> Double
     {
         totalAmountToPay = 0
-        for t in bills
+        for t in billDicn
         {
-            totalAmountToPay = totalAmountToPay + t.totalBillAmount
+            totalAmountToPay = totalAmountToPay + t.value.totalBillAmount
         }
         return totalAmountToPay
         
@@ -79,11 +76,11 @@ class Customer:IDisplay
         }*/
         
         
-        for item in bills
+        for item in billDicn
         {
-                   item.Display()
-             print("***********************************************************")
-               }
+            item.value.Display()
+            print("***********************************************************")
+        }
         
         if billDicn.count == 0
         {
@@ -96,32 +93,5 @@ class Customer:IDisplay
         }
         
     }
-    
-   /* func findBill(for id :Int)
-    {
-           var billid : Int
-           var exist = false
-           
-           for item in bills
-           {
-               billid = item.billID
-               if billid == id
-               {
-                   print("***************************************************")
-                   print("--------------------Bill Details--------------------")
-                   item.Display()
-                   print("***************************************************")
-                   exist = true
-                   break
-               }
-           }
-           
-           if !exist
-           {
-               print("***************************************************")
-               print("         There Is No Bill For Given Index         ")
-               print("***************************************************")
-           }
-       }*/
-    
+     
 }

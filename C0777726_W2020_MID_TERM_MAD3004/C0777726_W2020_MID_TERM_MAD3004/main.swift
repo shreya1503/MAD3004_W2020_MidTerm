@@ -11,7 +11,7 @@ import Foundation
 var b1 = Bill(billID: "BILL0001", billDate: Date(), billType: BillType.HYDRO)
 var b2 = Bill(billID: "BILL0002", billDate: Date(), billType: BillType.MOBILE)
 
-var m1 = Mobile(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, totalBillAmount: 60, mobileManufacturerName: "Apple Inc. iPhone X MAX+", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "901234567", internetGBUsed: 4, minuteUsed: 230)
+var m1 = Mobile(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, mobileManufacturerName: "Apple Inc. iPhone X MAX+", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "901234567", internetGBUsed: 4, minuteUsed: 230)
 
 
 var h1 = Hydro(billID: "HYD0001", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 250.50, agencyName: "Hydro Care", unitUsed: 25)
@@ -27,18 +27,19 @@ var i2 = Internet(billID: "INT0002", billDate: Date(), billType: BillType.INTERN
 
 
 var c1 = Customer(customerID: "C0001", firstName: "Shreya", lastName: "Vaghasia", emailID: "Shreya321@gmail.com")
-var c2 = Customer(customerID: "C0002", firstName: "Palak", lastName: "Joshipura", emailID: "PalakJ@gmail.com")
-var c3 = Customer(customerID: "C0003", firstName: "Charmi", lastName: "Patel", emailID: "CharmiPatelgmail.com")
-
 c1.insertBill(Bills : m1)
 c1.insertBill(Bills: h1)
 c1.insertBill(Bills: i1)
 c1.display()
 
+
+var c2 = Customer(customerID: "C0002", firstName: "Palak", lastName: "Joshipura", emailID: "PalakJ@gmail.com")
 c2.insertBill(Bills : h2)
 c2.insertBill(Bills : i2)
 c2.display()
 
+
+var c3 = Customer(customerID: "C0003", firstName: "Charmi", lastName: "Patel", emailID: "CharmiPatelgmail.com")
 c3.insertBill(Bills : h3)
 c3.display()
 
