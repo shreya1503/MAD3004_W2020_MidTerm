@@ -11,4 +11,11 @@ import Foundation
 extension String
 {
     
+    func Emailvalidation() -> Bool
+    {
+        let EmailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let EmailTest = NSPredicate(format : "Self match %@" , EmailRegex)
+        return EmailTest.evaluate(with: self)
+    }
+    
 }
