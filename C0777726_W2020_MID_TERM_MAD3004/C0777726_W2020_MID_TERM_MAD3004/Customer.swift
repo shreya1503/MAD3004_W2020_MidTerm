@@ -16,7 +16,7 @@ class Customer:IDisplay
         case EmailIdInvailid , MobileNumberInvalid
     }
     
-    var customerID : String
+    var customerID : Int
     var firstName : String
     var lastName : String
     var fullName : String
@@ -29,7 +29,7 @@ class Customer:IDisplay
     //var bills = [Bill]()
     var totalAmountToPay : Double = 0.0
     
-    init(customerID:String, firstName:String, lastName:String, emailID:String)
+    init(customerID:Int, firstName:String, lastName:String, emailID:String)
     {
         self.customerID = customerID
         self.firstName = firstName
