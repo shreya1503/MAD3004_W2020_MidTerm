@@ -33,8 +33,6 @@ class Customer:IDisplay
         self.customerID = customerID
         self.firstName = firstName
         self.lastName = lastName
-        //self.emailID = emailID
-        //billDicn.updateValue(Bill, forKey: customerID)
         
         if emailID.Emailvalidation() == true
         {
@@ -42,7 +40,7 @@ class Customer:IDisplay
         }
         else
         {
-            self.emailID = "eMail id is not valid \(emailID)"
+            self.emailID = "Email ID Is Not Valid "
         }
     }
     
