@@ -33,8 +33,17 @@ class Customer:IDisplay
         self.customerID = customerID
         self.firstName = firstName
         self.lastName = lastName
-        self.emailID = emailID
+        //self.emailID = emailID
         //billDicn.updateValue(Bill, forKey: customerID)
+        
+        if emailID.Emailvalidation() == true
+        {
+                self.emailID = emailID
+        }
+        else
+        {
+            self.emailID = "eMail id is not valid \(emailID)"
+        }
     }
     
     func insertBill(Bills : Bill, customerID : String)
@@ -57,7 +66,7 @@ class Customer:IDisplay
     {
         print("Customer ID          : \(customerID)")
         print("Customer Full Name   : \(fullName)")
-        print("Customer Email ID    : \(emailID)")
+        print("Customer Email ID    : \(String(describing : self.emailID))")
         print("             \t-----BILL INFORMATION-----          ")
         print("***********************************************************")
    
