@@ -10,6 +10,12 @@ import Foundation
 
 class Customer:IDisplay
 {
+    
+    enum CustomerNotFound
+    {
+        case EmailIdInvailid , MobileNumberInvalid
+    }
+    
     var customerID : String
     var firstName : String
     var lastName : String
