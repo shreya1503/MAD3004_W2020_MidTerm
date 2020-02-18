@@ -70,6 +70,13 @@ if customers.count==0
 {
     print("No Customers Exists Yet")
 }
-
-
+else
+{
+    print("\t-----List Of Customers-----\t")
+    for i in customers
+    {
+        print("\(i.key) : \(i.value.fullName)")
+    }
+}
+   
 
