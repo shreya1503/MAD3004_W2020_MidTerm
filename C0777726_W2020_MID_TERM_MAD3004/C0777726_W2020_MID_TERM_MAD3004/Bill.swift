@@ -21,12 +21,12 @@ class Bill
     var totalBillAmount : Double
     var date : String
     
-    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double)
+    init(billID:String, billDate:Date, billType:BillType)
     {
         self.billID = billID
         self.billDate = billDate
         self.billType = billType
-        self.totalBillAmount = totalBillAmount
+        self.totalBillAmount = 0
         
         let formater = DateFormatter()
         formater.dateFormat = "EEE, MMM,dd"

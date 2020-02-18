@@ -38,6 +38,7 @@ class Customer:IDisplay
     
     func totalBill() -> Double
     {
+        totalAmountToPay = 0
         for t in billDicn
         {
              totalAmountToPay = totalAmountToPay + t.value.totalBillAmount

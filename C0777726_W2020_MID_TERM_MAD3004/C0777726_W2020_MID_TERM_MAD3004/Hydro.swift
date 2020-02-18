@@ -17,7 +17,8 @@ class Hydro : Bill
     {
         self.agencyName = agencyName
         self.unitUsed = unitUsed
-        super.init(billID:billID, billDate:billDate, billType:billType, totalBillAmount:totalBillAmount)
+        super.init(billID:billID, billDate:billDate, billType:billType)
+        self.totalBillAmount = Double(unitUsed * 0.30)
     }
         
     override func Display()

@@ -8,8 +8,8 @@
 
 import Foundation
 
-var b1 = Bill(billID: "BILL0001", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 25)
-var b2 = Bill(billID: "BILL0002", billDate: Date(), billType: BillType.MOBILE, totalBillAmount: 25)
+var b1 = Bill(billID: "BILL0001", billDate: Date(), billType: BillType.HYDRO)
+var b2 = Bill(billID: "BILL0002", billDate: Date(), billType: BillType.MOBILE)
 
 var m1 = Mobile(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, totalBillAmount: 60, mobileManufacturerName: "Apple Inc. iPhone X MAX+", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "9012345678", internetGBUsed: 4, minuteUsed: 230)
 
@@ -21,9 +21,9 @@ var h2 = Hydro(billID: "HYD0002", billDate: Date(), billType: BillType.HYDRO, to
 var h3 = Hydro(billID: "HYD0003", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 100.50, agencyName: "Bruce Power", unitUsed: 18)
 
 
-var i1 = Internet(billID: "INT0001", billDate: Date(), billType: BillType.INTERNET, totalBillAmount: 180, providerName: "Rogers", internetGBUsed: 500)
+var i1 = Internet(billID: "INT0001", billDate: Date(), billType: BillType.INTERNET, providerName: "Rogers", internetGBUsed: 500)
 
-var i2 = Internet(billID: "INT0002", billDate: Date(), billType: BillType.INTERNET, totalBillAmount: 140, providerName: "Freedom", internetGBUsed: 400)
+var i2 = Internet(billID: "INT0002", billDate: Date(), billType: BillType.INTERNET, providerName: "Freedom", internetGBUsed: 400)
 
 
 var c1 = Customer(customerID: "C0001", firstName: "Shreya", lastName: "Vaghasia", emailID: "Shreya321@gmail.com")
