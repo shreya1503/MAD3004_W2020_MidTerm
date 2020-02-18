@@ -78,5 +78,25 @@ else
         print("\(i.key) : \(i.value.fullName)")
     }
 }
-   
+
+   print("***********************************************************")
+      print("Enter Customer ID : ", separator: "", terminator: " ")
+      let customerID = Int(readLine() ?? "0")
+      if customerID != nil && customerID != 0
+      {
+          if let cust = getCustomerByID(id: customerID!)
+          {
+              cust.display()
+          }
+          else
+          {
+              print("There Is No Customer With \(customerID!) ID")
+          }
+      }
+      else
+      {
+          print("Customer ID Is Not Valid")
+
+      }
+
 
