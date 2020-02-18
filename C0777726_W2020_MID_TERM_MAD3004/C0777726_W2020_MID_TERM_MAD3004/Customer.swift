@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Foundation
+
 class Customer:IDisplay
 {
     
@@ -73,11 +75,14 @@ class Customer:IDisplay
         /*for t in billDicn
         {
             t.value.Display()
-            print("***********************************************************")
+           
         }*/
         
-        for item in bills {
+        
+        for item in bills
+        {
                    item.Display()
+             print("***********************************************************")
                }
         
         if billDicn.count == 0
@@ -92,7 +97,7 @@ class Customer:IDisplay
         
     }
     
-    func findBill(for id :Int)
+   /* func findBill(for id :Int)
     {
            var billid : Int
            var exist = false
@@ -117,7 +122,6 @@ class Customer:IDisplay
                print("         There Is No Bill For Given Index         ")
                print("***************************************************")
            }
-       }
+       }*/
     
 }
-		        

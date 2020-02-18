@@ -16,15 +16,22 @@ class Mobile : Bill
     var internetGBUsed : Float
     var minuteUsed : Float
     
-    init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double, mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minuteUsed:Float)
+    init(billID:String, billDate:Date, billType:BillType,mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minuteUsed:Float)
     {
         self.mobileManufacturerName = mobileManufacturerName
         self.planName = planName
+       
+        if mobileNumber.count != 10
+        {
+            print("Invalid Mobile Number : Mobile Number Cannot Be Less Than 10 Digits")
+        }
+        
         self.mobileNumber = mobileNumber
+               
         self.internetGBUsed = internetGBUsed
         self.minuteUsed = minuteUsed
         super.init(billID:billID, billDate:billDate, billType:billType)
-        self.totalBillAmount = Double(minuteUsed * 0.10)
+        self.totalBillAmount = Double(minuteUsed * 0.05)
     }
     
     override func Display()
