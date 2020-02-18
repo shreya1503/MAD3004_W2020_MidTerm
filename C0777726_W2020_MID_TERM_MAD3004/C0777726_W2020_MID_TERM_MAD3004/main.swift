@@ -27,20 +27,20 @@ var i2 = Internet(billID: "INT0002", billDate: Date(), billType: BillType.INTERN
 
 
 var c1 = Customer(customerID: "C0001", firstName: "Shreya", lastName: "Vaghasia", emailID: "Shreya321@gmail.com")
-c1.insertBill(Bills : m1)
-c1.insertBill(Bills: h1)
-c1.insertBill(Bills: i1)
+c1.insertBill(Bills: m1, billID: m1.billID)
+c1.insertBill(Bills: h1, billID: h1.billID)
+c1.insertBill(Bills: i1, billID: i1.billID)
 c1.display()
 
 
 var c2 = Customer(customerID: "C0002", firstName: "Palak", lastName: "Joshipura", emailID: "PalakJ@gmail.com")
-c2.insertBill(Bills : h2)
-c2.insertBill(Bills : i2)
+c2.insertBill(Bills : h2, billID: h2.billID)
+c2.insertBill(Bills : i2, billID: i2.billID)
 c2.display()
 
 
 var c3 = Customer(customerID: "C0003", firstName: "Charmi", lastName: "Patel", emailID: "CharmiPatelgmail.com")
-c3.insertBill(Bills : h3)
+c3.insertBill(Bills : h3, billID: h3.billID)
 c3.display()
 
 
