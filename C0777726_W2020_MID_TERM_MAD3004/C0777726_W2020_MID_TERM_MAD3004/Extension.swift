@@ -18,4 +18,11 @@ extension String
         return EmailTest.evaluate(with: self)
     }
     
+    func mobilevalidation() -> Bool
+    {
+        let MobileNumberRegex = "[0-9]{10}"
+        let MobileTest =  NSPredicate(format:"Self match %@",MobileNumberRegex)
+        return MobileTest.evaluate(with:self)
+    }
+
 }
