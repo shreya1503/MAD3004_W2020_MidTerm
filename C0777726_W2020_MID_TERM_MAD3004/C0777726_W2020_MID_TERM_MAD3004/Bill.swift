@@ -19,6 +19,7 @@ class Bill
     var billDate : Date
     var billType : BillType
     var totalBillAmount : Double
+    var date : String
     
     init(billID:String, billDate:Date, billType:BillType, totalBillAmount:Double)
     {
@@ -26,14 +27,21 @@ class Bill
         self.billDate = billDate
         self.billType = billType
         self.totalBillAmount = totalBillAmount
+        
+        let formater = DateFormatter()
+        formater.dateFormat = "EEE, MMM,dd"
+        
+        let hourformater = DateFormatter()
+        hourformater.dateFormat = "h:mm a"
+        date = formater.string(from: billDate) + hourformater.string(from: billDate)
     }
     
     func Display()
     {
-        print("\tBill ID              : \(billID)")
-        print("\tBill Date            : \(billDate)")
-        print("\tBill Type            : \(billType)")
-        print("\tBill Amount          : $\(totalBillAmount)")
+        print("\tBill ID              : \(self.billID)")
+        print("\tBill Date            : \(self.billDate)")
+        print("\tBill Type            : \(self.billType)")
+        print("\tBill Amount          : $\(self.totalBillAmount)")
     }
     
 }
