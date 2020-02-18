@@ -25,7 +25,8 @@ class Customer:IDisplay
     }
     var emailID : String
     //Bill Dictionary to store all types of bills
-    lazy var billDicn = [String:Bill]()
+    lazy var billDicn = [String:[Bill]]()
+    var bills = [Bill]()
     var totalAmountToPay : Double = 0.0
     
     init(customerID:String, firstName:String, lastName:String, emailID:String)
@@ -44,17 +45,18 @@ class Customer:IDisplay
         }
     }
     
-    func insertBill(Bills : Bill, customerID : String)
+    func insertBill(Bills : Bill)
     {
-        billDicn.updateValue(Bills, forKey : customerID)
+        bills.append(Bills)
+        billDicn.updateValue([Bills], forKey : customerID)
     }
     
     func totalBill() -> Double
     {
         totalAmountToPay = 0
-        for t in billDicn
+        for t in bills
         {
-             totalAmountToPay = totalAmountToPay + t.value.totalBillAmount
+            totalAmountToPay = totalAmountToPay + t.totalBillAmount
         }
         return totalAmountToPay
         
@@ -68,11 +70,15 @@ class Customer:IDisplay
         print("             \t-----BILL INFORMATION-----          ")
         print("***********************************************************")
    
-        for t in billDicn
+        /*for t in billDicn
         {
             t.value.Display()
             print("***********************************************************")
-        }
+        }*/
+        
+        for item in bills {
+                   item.Display()
+               }
         
         if billDicn.count == 0
         {
@@ -85,6 +91,33 @@ class Customer:IDisplay
         }
         
     }
+    
+    func findBill(for id :Int)
+    {
+           var billid : Int
+           var exist = false
+           
+           for item in bills
+           {
+               billid = item.billID
+               if billid == id
+               {
+                   print("***************************************************")
+                   print("--------------------Bill Details--------------------")
+                   item.Display()
+                   print("***************************************************")
+                   exist = true
+                   break
+               }
+           }
+           
+           if !exist
+           {
+               print("***************************************************")
+               print("         There Is No Bill For Given Index         ")
+               print("***************************************************")
+           }
+       }
     
 }
 		        
