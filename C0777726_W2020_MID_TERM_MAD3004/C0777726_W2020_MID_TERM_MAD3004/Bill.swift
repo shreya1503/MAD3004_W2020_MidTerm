@@ -40,7 +40,7 @@ class Bill
     func Display()
     {
         print("\tBill ID              : \(self.billID)")
-        print("\tBill Date            : \(self.billDate)")
+        print("\tBill Date            : \(self.date)")
         print("\tBill Type            : \(self.billType)")
         print("\tBill Amount          : $\(self.totalBillAmount)")
     }

@@ -40,7 +40,7 @@ class Mobile : Bill
         super.Display()
         print("\tManufacturer Name    : \(mobileManufacturerName)")
         print("\tPlan Name            : \(planName)")
-        print("\tMobile Number        : \(String(describing: self.mobileNumber))")
+        print("\tMobile Number        : \(mobileNumber)")
         print("\tInternet Usage       : \(internetGBUsed) GB")
         print("\tMinutes Usage        : \(minuteUsed) Minutes")
     

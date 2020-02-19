@@ -11,7 +11,9 @@ import Foundation
 var b1 = Bill(billID: "BILL0001", billDate: Date(), billType: BillType.HYDRO)
 var b2 = Bill(billID: "BILL0002", billDate: Date(), billType: BillType.MOBILE)
 
-var m1 = Mobile(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, mobileManufacturerName: "Apple Inc. iPhone X MAX+", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "901234567", internetGBUsed: 4, minuteUsed: 230)
+var m1 = Mobile(billID: "MOB0001", billDate: Date(), billType: BillType.MOBILE, mobileManufacturerName: "Apple Inc. iPhone X MAX+", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "9012304567", internetGBUsed: 4, minuteUsed: 230)
+
+var m2 = Mobile(billID: "MOB0002", billDate: Date(), billType: BillType.MOBILE, mobileManufacturerName: "Samsung Galaxy 8", planName: "General Plan", mobileNumber: "987678905", internetGBUsed: 5, minuteUsed: 200)
 
 
 var h1 = Hydro(billID: "HYD0001", billDate: Date(), billType: BillType.HYDRO, totalBillAmount: 250.50, agencyName: "Hydro Care", unitUsed: 25)
@@ -90,7 +92,7 @@ else
           }
           else
           {
-              print("There Is No Customer With \(customerID!) ID")
+              print("There Is No Customer With ID \(customerID!) ")
           }
       }
       else
